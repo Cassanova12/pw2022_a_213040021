@@ -8,10 +8,12 @@
 // for( $i = 0; $i < 10; $i++ ) {
 //    echo "Hallo Dunia! <br>";
 // }
-
-$i = 0;
-while( $i < 10 ) {
-    echo "Hallo Dunia! <br>";
-$i++;
-}
-?>
+// $i = 10;
+//  while( $i < 10 ) {
+//     echo "Hallo Dunia! <br>";
+//  $i++;
+//  }
+$i = 10;
+do {
+   echo "Hallo Dunia! <br>";
+} while( $i < 7 );
