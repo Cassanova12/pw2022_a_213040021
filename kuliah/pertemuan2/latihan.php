@@ -76,6 +76,12 @@
   echo "<br>";
   echo $x;
 
+  echo "<br>";
+
+  // Logika
+  // &&, ||, !
+  $x = 30;
+  var_dump($x < 20 || $x % 2 == 0);
 
   
 ?>
