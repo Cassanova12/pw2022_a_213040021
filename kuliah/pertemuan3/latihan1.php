@@ -13,7 +13,8 @@
 //     echo "Hallo Dunia! <br>";
 //  $i++;
 //  }
-$i = 10;
-do {
-   echo "Hallo Dunia! <br>";
-} while( $i < 7 );
+// $i = 10;
+// do {
+//    echo "Hallo Dunia! <br>";
+// $i++;
+// } while( $i < 7 );
