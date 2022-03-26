@@ -1,30 +1,67 @@
 <?php
     $mahasiswa = [
         [
-            "nama" => "alif akbar", 
+            "nama" => "Alif Akbar", 
             "NPM" => "213040021", 
             "Email" => "rajabiakbaralif@gmail.com", 
             "Jurusan" => "teknik informatika",
             "img" => "Alif A.jpeg"],
             
         [
-            "nama" => "alfarozi", 
+            "nama" => "M.Alfarozi", 
             "NPM" => "213040003", 
             "Email" => "alfarozi@gmail.com", 
             "Jurusan" =>  "teknik robotik",
             "img" => "foto 1.jpeg"],
         [
-            "nama" => "gilang", 
+            "nama" => "Gilang R", 
             "NPM" => "21304004", 
             "Email" => "gilang@gmail.com", 
             "Jurusan" => "teknik sastra",
             "img" => "foto 2.jpeg"],
         [
-            "nama" => "jangkrik", 
-            "NPM" => "213040040", 
-            "Email" => "jangkrik@gmail.com", 
+            "nama" => "Faqih FKP", 
+            "NPM" => "213040033", 
+            "Email" => "faqih123@gmail.com", 
             "Jurusan" => "teknik Industri",
             "img" => "foto 3.jpeg"],
+        [
+            "nama" => "Fauzi Ilyas", 
+            "NPM" => "213040032", 
+            "Email" => "fauzi123@gmail.com", 
+            "Jurusan" => "teknik musik",
+            "img" => "foto 2.jpeg"],
+        [
+              "nama" => "Gilman Arief", 
+              "NPM" => "213040042", 
+              "Email" => "ariefgilman12@gmail.com", 
+              "Jurusan" => "teknik lingkungan",
+              "img" => "foto 3.jpeg"],
+        [
+              "nama" => "Malwi", 
+              "NPM" => "213040015", 
+              "Email" => "malwiedanuwu@gmail.com", 
+              "Jurusan" => "teknik Pangan",
+              "img" => "foto 2.jpeg"],
+        [
+              "nama" => "M.Irfan", 
+              "NPM" => "213040019", 
+              "Email" => "irfan321@gmail.com", 
+              "Jurusan" => "teknik mesin",
+              "img" => "foto 3.jpeg"],
+        [
+              "nama" => "Daffa Dhiya", 
+              "NPM" => "213040006", 
+              "Email" => "daffadhi21@gmail.com", 
+              "Jurusan" => "Pendidikan Indonesia",
+              "img" => "foto 2.jpeg"],
+        [
+              "nama" => "Muhammad Lutfi", 
+              "NPM" => "213040015", 
+              "Email" => "lutfhi45@gmail.com", 
+              "Jurusan" => "Bahasa German",
+              "img" => "foto 3.jpeg"]
+
     ];
     
 ?>
