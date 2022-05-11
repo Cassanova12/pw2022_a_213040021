@@ -22,7 +22,7 @@ $hewan = query("SELECT * FROM hewan_a");
         <th>Gambar</th>
         <th>Nama</th>
         <th>Nama Latin</th>
-        <th>Jenis</th>
+        <th>JEMLIS</th>
 
     </tr>
 
