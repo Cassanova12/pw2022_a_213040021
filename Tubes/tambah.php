@@ -1,21 +1,24 @@
 <?php 
-// koneksi ke DBMS 
-$conn = mysqli_connect("localhost", "root", "", "tubes");
-
+require "functions.php";
 // cek apakah tombol submit sudah ditekan atau belum 
 if( isset($_POST["submit"]) ) {
-    // ambil data dari tiap elemen dalam form
-    $Gambar = $_POST["Gambar"];
-    $Nama = $_POST["Nama"];
-    $NamaLatin = $_POST["NamaLatin"];
-    $Jenis = $_POST["Jenis"];
-
-    // querry insert data 
-    $query = "INSERT INTO hewan_a
-                 VALUES
-              ('', '$Nama', '$NamaLatin', '$Jenis', '$Gambar')
-            ";
-    mysqli_query($conn, $query);
+    
+    // cek apakah data berhasil ditambahkan / tidak? 
+    if (tambah($_POST) > 0 ) {
+        echo "
+            <script>
+                alert('data berhasil ditambahkan');
+                document.location.href = 'index.php';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('data gagal ditambahkan');
+                document.location.href = 'index.php';
+            </script>
+        ";
+    }
 
 }
 ?>
@@ -34,7 +37,7 @@ if( isset($_POST["submit"]) ) {
         <ul>
             <li>
                 <label for="Gambar">Gambar :</label>
-                <input type="text" name="Gambar" id="Gambar">
+                <input type="text" name="Gambar" id="Gambar" required>
             </li>
             <li>
                 <label for="Nama">Nama :</label>
