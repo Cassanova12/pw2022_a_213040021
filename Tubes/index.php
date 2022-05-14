@@ -36,7 +36,7 @@ $hewan = query("SELECT * FROM hewan_a");
     <tr>
         <td><?= $i; ?></td>  
         <td>
-            <a class="btn btn-primary" href="edit.php">edit</a> |   
+            <a class="btn btn-primary" href="edit.php?id=<?= $row["id"]; ?>">edit</a>    |   
             <a class="btn btn-primary" href="hapus.php?id=<?= $row ["id"]; ?>" onclick="return confirm('Anda yakin ingin menghapusnya?')">hapus</a>
         </td>
         <td><img src="img/<?= $row ["gambar"]; ?>" width="200   "></td>

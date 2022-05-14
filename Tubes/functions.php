@@ -37,7 +37,26 @@ function hapus($id) {
     return mysqli_affected_rows($conn);
 }
 
+function edit($data) {
+    global $conn;
 
+    $id = $data["id"];
+    $Gambar = htmlspecialchars($data["Gambar"]);
+    $Nama = htmlspecialchars($data["Nama"]);
+    $NamaLatin = htmlspecialchars($data["NamaLatin"]);
+    $Jenis = htmlspecialchars($data["Jenis"]);
 
+    $query = "UPDATE hewan_a SET
+                Gambar = '$Gambar',
+                Nama = '$Nama',
+                Nama_Latin = '$NamaLatin',
+                Jenis = '$Jenis'
+              WHERE id = $id;
+             ";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+
+}
 
 ?>
