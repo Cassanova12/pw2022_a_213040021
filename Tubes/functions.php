@@ -59,4 +59,14 @@ function edit($data) {
 
 }
 
+function cari($keyword) {
+    $query = "SELECT * FROM hewan_a 
+                WHERE 
+              nama LIKE '%$keyword%' OR 
+              nama_latin LIKE '%$keyword%' OR
+              jenis LIKE '%$keyword%'
+              ";
+    return query($query); 
+}
+
 ?>

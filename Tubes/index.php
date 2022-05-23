@@ -1,6 +1,13 @@
 <?php 
 require 'functions.php';
 $hewan = query("SELECT * FROM hewan_a");
+
+// Tombol cari Diclick
+
+if( isset($_POST['cari']) ) {
+    $hewan = cari($_POST['keyword']);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +25,18 @@ $hewan = query("SELECT * FROM hewan_a");
 <a href="tambah.php">Tambah Data Hewan</a>
 <br><br>
 
+<form action="" method="post">
+
+    <input type="text" name="keyword" size="40" autofocus placeholder="Masukan Pencaharian..." 
+    autocomplete="off">
+    <button type="submit" name="cari">Cari</button>
+
+
+</form>
+<br>
 <table class = "table-bordered table"  cellpadding="10" cellspacing="0">
     
-    <tr>
+    <tr>    
         <th>No.</th>
         <th>Aksi</th>
         <th>Gambar</th>
@@ -39,7 +55,7 @@ $hewan = query("SELECT * FROM hewan_a");
             <a class="btn btn-primary" href="edit.php?id=<?= $row["id"]; ?>">edit</a>    |   
             <a class="btn btn-primary" href="hapus.php?id=<?= $row ["id"]; ?>" onclick="return confirm('Anda yakin ingin menghapusnya?')">hapus</a>
         </td>
-        <td><img src="img/<?= $row ["gambar"]; ?>" width="200   "></td>
+        <td><img src="img/<?= $row ["gambar"]; ?>" width="120"></td>
         <td><?= $row["nama"]; ?></td>
         <td><?= $row["nama_latin"]; ?></td>
         <td><?= $row["jenis"]; ?></td>
