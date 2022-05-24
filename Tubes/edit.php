@@ -39,13 +39,15 @@ if( isset($_POST["submit"]) ) {
 <body>
     <h1>Edit data hewan</h1>    
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $hewan["id"]; ?>">
+        <input type="hidden" name="gambarLama" value="<?= $hewan["gambar"]; ?>">
         <ul>
             <li>
-                <label for="Gambar">Gambar :</label>
-                <input type="text" name="Gambar" id="Gambar" required value="<?= $hewan["gambar"]; ?>">
-            </li>
+                <label for="Gambar">Gambar :</label> <br>
+                <img src="img/<?= $hewan_a['Gambar']; ?>" width="40"><br>
+                <input type="file" name="Gambar" id="Gambar">
+            </li> 
             <li>
                 <label for="Nama">Nama :</label>
                 <input type="text" name="Nama" id="Nama" value="<?= $hewan["nama"]; ?>">

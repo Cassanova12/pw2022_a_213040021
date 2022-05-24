@@ -33,11 +33,11 @@ if( isset($_POST["submit"]) ) {
 <body>
     <h1>Tambah data hewan</h1>    
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
                 <label for="Gambar">Gambar :</label>
-                <input type="text" name="Gambar" id="Gambar" required>
+                <input type="file" name="Gambar" id="Gambar" required>
             </li>
             <li>
                 <label for="Nama">Nama :</label>
