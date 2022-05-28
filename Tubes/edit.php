@@ -45,7 +45,7 @@ if( isset($_POST["submit"]) ) {
         <ul>
             <li>
                 <label for="Gambar">Gambar :</label> <br>
-                <img src="img/<?= $hewan_a['Gambar']; ?>" width="40"><br>
+                <img src="img/<?= $hewan['gambar']; ?>" width="120"><br>
                 <input type="file" name="Gambar" id="Gambar">
             </li> 
             <li>
