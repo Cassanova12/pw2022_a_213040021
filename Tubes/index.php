@@ -1,4 +1,11 @@
 <?php 
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+  header("Location: login.php");
+  exit;
+}
+
 require 'functions.php';
 $hewan = query("SELECT * FROM hewan_a");
 
@@ -20,6 +27,8 @@ if( isset($_POST['cari']) ) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>
+
+  <a href="logout.php">Logout</a>
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
