@@ -49,9 +49,6 @@ if( isset($_POST["login"]) ) {
     <title>Halaman Login</title>
   </head>
   <body class="bg-secondary bg-gradient">
-    <?php if ( isset($error) ) : ?>
-    <p style="color: red; font-style: italic">USERNAME / PASSWORD SALAH!!!</p>
-    <?php endif; ?>
     <!--  -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -83,6 +80,9 @@ if( isset($_POST["login"]) ) {
                   <div class="form-group">
                     <input name="login" class="btn btn-lg btn-primary btn-block btnForget" value="Masuk" type="submit" />
                   </div>
+                  <?php if ( isset($error) ) : ?>
+                  <p style="color: red; font-style: italic">USERNAME / PASSWORD SALAH!!!</p>
+                  <?php endif; ?>
                   <a class="btn btn-sm btn-primary" href="registrasi.php">Belum punya akun?</a>
                 </form>
               </div>
