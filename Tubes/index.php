@@ -88,9 +88,9 @@ if( isset($_POST['cari']) ) {
 
 <?php for($i = 1; $i <= $jumlahHalaman; $i++) : ?>
     <?php if( $i == $halamanAktif ) : ?>
-        <a class="badge bg-primary" href="?halaman=<?= $i; ?>" style="font-weight: bold; color: black;"><?= $i; ?></a>
+        <a class="badge bg-info" href="?halaman=<?= $i; ?>" style="font-weight: bold; color: black;"><?= $i; ?></a>
     <?php else : ?>
-        <a class="badge bg-dark" href="?halaman=<?= $i; ?>"><?= $i; ?></a>
+        <a class="badge bg-info" href="?halaman=<?= $i; ?>"><?= $i; ?></a>
     <?php endif; ?>
 <?php endfor; ?>
 
