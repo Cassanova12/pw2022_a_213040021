@@ -7,7 +7,18 @@ if( !isset($_SESSION["login"]) ) {
 }
 
 require 'functions.php';
-$hewan = query("SELECT * FROM hewan_a");
+
+// Pagination
+// Kongfigurasi
+$jumlahDataPerHalaman = 15;
+$jumlahData = count(query("SELECT * FROM hewan_a"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$halamanAktif = ( isset($_GET["halaman"])) ? $_GET ["halaman"] : 1;
+$awalData = ( $jumlahDataPerHalaman * $halamanAktif ) - $jumlahDataPerHalaman;
+
+
+
+$hewan = query("SELECT * FROM hewan_a LIMIT $awalData, $jumlahDataPerHalaman");
 
 // Tombol cari Diclick
 
@@ -41,10 +52,14 @@ if( isset($_POST['cari']) ) {
         <a class="nav-link disabled">Disabled</a>
       </div>
     </div>
+
+    <!--  -->
     <form action = "" method = "POST" class="d-flex">
-      <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-      <button class="btn btn-outline-success" type="submit" name="cari"><i class="bi bi-search"></i></button>
+      <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search" autocomplete="off" id="keyword">
+      <button class="btn btn-outline-primary" type="submit" name="cari" id="tombol-cari"><i class="bi bi-search"></i></button>
     </form>
+    <!--  -->
+
   </div>
 </nav>
     <!-- a -->
@@ -64,7 +79,29 @@ if( isset($_POST['cari']) ) {
 
 
 </form> -->
+
+<!-- Navigasi  -->
+
+<?php if( $halamanAktif > 1) : ?>
+<a class="badge bg-primary" href ="?halaman=<?= $halamanAktif - 1; ?>">&laquo;</a>
+<?php endif; ?>
+
+<?php for($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+    <?php if( $i == $halamanAktif ) : ?>
+        <a class="badge bg-primary" href="?halaman=<?= $i; ?>" style="font-weight: bold; color: black;"><?= $i; ?></a>
+    <?php else : ?>
+        <a class="badge bg-dark" href="?halaman=<?= $i; ?>"><?= $i; ?></a>
+    <?php endif; ?>
+<?php endfor; ?>
+
+<?php if( $halamanAktif < $jumlahHalaman ) : ?>
+<a class="badge bg-secondary" href="?halaman=<?= $halamanAktif + 1; ?>">&raquo;</a>
+<?php endif; ?>
+
 <br>
+
+<br>
+<div id="container">
 <table class = "table-bordered table"  cellpadding="10" cellspacing="0">
     
     <tr>    
@@ -204,6 +241,9 @@ if( isset($_POST['cari']) ) {
         </div>
       </div>
     </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
