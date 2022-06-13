@@ -43,7 +43,7 @@ if( isset($_POST['cari']) ) {
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Jenis Jenis Hewan</a>
+    <a class="navbar-brand" href="index.php">Animal Knowledge</a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="tambah.php">Home</a>
@@ -172,7 +172,7 @@ if( isset($_POST['cari']) ) {
                     <li class="mb-2">
                       ©2022 dibuat by
                       <a
-                        href="https://cassanova12.github.io/TEMPE-Quu/"
+                        href="https://www.instagram.com/alif.rjb/"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-decoration-none tr"
